@@ -3,13 +3,16 @@
 
 #include <string>
 #include <ostream>
+#include <iostream>
 #include "BankTransferSender.h"
 #include "CashSender.h"
 #include "CheckSender.h"
-
+#include "ISender.h"
+using namespace std;
 /**
  * Abstract Class of Person
  */
+
 class Person {
 public:
 
@@ -31,9 +34,7 @@ public:
 
     void setDocumentId(int documentId);
 
-    std::string processPaymentBankTransfer();
-    std::string processPaymentCash();
-    std::string processPaymentCheck();
+    std::string processPayment(ISender* sender);
 
     virtual std::string toString() const; // Virtual
 private:

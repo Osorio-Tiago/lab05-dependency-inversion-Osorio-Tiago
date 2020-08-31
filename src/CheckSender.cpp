@@ -4,6 +4,8 @@
 
 #include "CheckSender.h"
 
-std::string CheckSender::sendPayment() const {
-    return "Sending the check with the money";
-}
+CheckSender::CheckSender() = default;
+
+CheckSender::~CheckSender() = default;
+
+std::string CheckSender::sendPayment() { return "Sending the check with the money"; }

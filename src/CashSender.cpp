@@ -4,6 +4,9 @@
 
 #include "CashSender.h"
 
-std::string CashSender::sendPayment() const {
-    return "Give the money in the hands";
-}
+CashSender::CashSender() = default;
+
+CashSender::~CashSender() = default;
+
+std::string CashSender::sendPayment() { return "Give the money in the hands"; }
+
